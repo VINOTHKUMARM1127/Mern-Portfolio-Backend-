@@ -13,13 +13,13 @@ connectdb();
 const educationRoute = require("./routes/educationRoute.js");
 app.use("/", educationRoute);
 
-const projectsRoute = require("./Routes/ProjectsRoute.js")
+const projectsRoute = require("./routes/ProjectsRoute.js")
 app.use("/",projectsRoute)
 
-const UserDataRoute = require("./Routes/UserDataRoute.js")
+const UserDataRoute = require("./routes/UserDataRoute.js")
 app.use("/",UserDataRoute)
 
-const detailsRoute = require("./Routes/detailsRoute.js")
+const detailsRoute = require("./routes/detailsRoute.js")
 app.use("/",detailsRoute)
 
 app.listen(process.env.PORT, () => console.log("🚀 Server running on port 5000"));
