@@ -10,7 +10,7 @@ app.use(cors());
 
 connectdb();
 
-const educationRoute = require("./routes/educationRoute");
+const educationRoute = require("./routes/educationRoute.js");
 app.use("/", educationRoute);
 
 const projectsRoute = require("./Routes/ProjectsRoute.js")
