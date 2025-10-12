@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const User = require("../Models/UserData");
+const User = require("../models/userdata");
 
 router.get("/get-user", async (req, res) => {
     const SecretKey = process.env.SecretKey;
