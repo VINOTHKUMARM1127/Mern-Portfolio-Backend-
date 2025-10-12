@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Education = require("../models/education");
+const Education = require("../Models/Education.js");
 
 router.post("/add-education", async (req, res) => {
   try {
