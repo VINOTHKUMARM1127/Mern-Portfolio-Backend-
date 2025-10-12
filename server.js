@@ -22,5 +22,5 @@ app.use("/",UserDataRoute)
 const detailsRoute = require("./Routes/detailsRoute.js")
 app.use("/",detailsRoute)
 
+app.listen(process.env.PORT, () => console.log("🚀 Server running on port 5000"));
 
-module.exports = app;
