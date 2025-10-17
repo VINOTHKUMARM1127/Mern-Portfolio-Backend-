@@ -6,7 +6,16 @@ const connectdb = require("./db.js");
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+
+
+const corsOptions = {
+  origin: "https://vinothkumarm27.netlify.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],   
+  credentials: true,                           
+};
+
+app.use(cors(corsOptions));
+
 
 connectdb();
 
