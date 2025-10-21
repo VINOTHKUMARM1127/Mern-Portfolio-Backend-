@@ -15,7 +15,7 @@ router.post(("/add-skills"), async (req,res)=>{
     try {
         const {Skill,Icon} = req.body;
         const newSkills = new Skills({
-            Skill,Icon
+            Skill,Icon,Category
         })
         await newSkills.save();
         res.status(200).json("Skill Added")
@@ -29,9 +29,9 @@ router.post(("/add-skills"), async (req,res)=>{
 
 router.put(("/update-skills/:id"), async (req,res)=>{
     try {
-        const {Skill,Icon} = req.body;
+        const {Skill,Icon,Category} = req.body;
         await Skills.findByIdAndUpdate(req.params.id, {
-            Skill,Icon
+            Skill,Icon,Category
         })
         res.status(200).json("Skill Updated")
     } catch (err) {
