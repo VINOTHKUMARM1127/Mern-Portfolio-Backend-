@@ -4,7 +4,7 @@ const Education = require("../Models/Education.js");
 
 router.post("/add-education", async (req, res) => {
   try {
-    const { CollegeName, Degree, Year, Description,Order } = req.body;
+    const { CollegeName, Degree, Year, Description, Order } = req.body;
     const newEducation = new Education({
       CollegeName,
       Degree,
@@ -39,7 +39,7 @@ router.delete("/delete-education/:id", async (req, res) => {
 
 router.put("/update-education/:id", async (req, res) => {
   try {
-    const { CollegeName, Degree, Year, Description } = req.body;
+    const { CollegeName, Degree, Year, Description, Order } = req.body;
     await Education.findByIdAndUpdate(req.params.id, {
       CollegeName,
       Degree,
