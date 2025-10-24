@@ -18,7 +18,7 @@ router.post("/add-skills", async (req, res) => {
       Skill,
       Icon,
       Category,
-      Order,
+      Order
     });
     await newSkills.save();
     res.status(200).json("Skill Added");
@@ -34,7 +34,7 @@ router.put("/update-skills/:id", async (req, res) => {
       Skill,
       Icon,
       Category,
-      Order,
+      Order
     });
     res.status(200).json("Skill Updated");
   } catch (err) {
